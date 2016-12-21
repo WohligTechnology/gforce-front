@@ -6,129 +6,164 @@
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
 @import "../bower_components/swiper/dist/css/swiper.min.css";
 @import "../bower_components/smart-app-banner/smart-app-banner.css";
-
 /* Bootstrap Variables Goes Here */
-
-$brand-primary: #0d9dff !default;
+$brand-primary: #4e65af !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
-$brand-danger: #fc483f !default;
+$brand-danger: #f16366 !default;
 $brand-info: #000072 !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
 body {
-    padding-top: 70px;
+  padding-top: 70px;
 }
 
 img.loading {
-    text-align: center;
-    opacity: 1;
-    width: 32px !important;
-    height: auto;
+  text-align: center;
+  opacity: 1;
+  width: 32px !important;
+  height: auto;
 }
 
 img {
-    opacity: 0;
-    @include transition(all 300ms ease);
+  opacity: 0;
+  @include transition(all 300ms ease);
 }
 
 img.doneLoading {
-    opacity: 1;
+  opacity: 1;
 }
 
 nav li:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 
 #map img {
-    opacity: 1;
+  opacity: 1;
 }
 
-a,
 .btn,
-[ui-sref] {
-    cursor: pointer;
-    @include transition(all ease 300ms);
+[ui-sref],
+a {
+  cursor: pointer;
+  @include transition(all ease 300ms);
 }
 
 footer {
-    font-size: 12px;
-    background-color: #eee;
-    padding: 10px 0;
-    p {
-        margin: 0;
-    }
-}
+  font-size: 12px;
+  background-color: #eee;
+  padding: 10px 0;
 
+  p {
+    margin: 0;
+  }
+}
 //bootstrap forms
-.input-lg,
-.input-group-lg>.form-control,
-.input-group-lg>.input-group-addon,
-.input-group-lg>.input-group-btn>.btn,
 .btn,
-.form-control {
-    border-radius: 0;
-    @include box-shadow(none);
+.form-control,
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn,
+.input-lg {
+  border-radius: 0;
+  @include box-shadow(none);
 }
 
 .form-control:focus {
-    border-color: $brand-primary;
-    outline: 0;
-    @include box-shadow(none);
+  border-color: $brand-primary;
+  outline: 0;
+  @include box-shadow(none);
 }
 
 .form-group {
-    position: relative;
+  position: relative;
 }
 
 .form-invalid {
+  color: $brand-danger;
+
+  .form-control {
+    border-color: $brand-danger;
     color: $brand-danger;
-    .form-control {
-        border-color: $brand-danger;
-        color: $brand-danger;
-        &::-webkit-input-placeholder {
-            color: $brand-danger;
-        }
+
+    &::-webkit-input-placeholder {
+      color: $brand-danger;
     }
+  }
 }
 
 .form-submission {
-    min-height: 300px;
+  min-height: 300px;
 }
-
 //FLEX SLIDER FIXES
 .flex-direction-nav {
-    a {
-        height: auto;
-    }
-    .flex-prev {
-        left: 10px !important;
-    }
-    .flex-next {
-        right: 10px !important;
-    }
-}
+  a {
+    height: auto;
+  }
 
+  .flex-prev {
+    left: 10px !important;
+  }
+
+  .flex-next {
+    right: 10px !important;
+  }
+}
 //SWIPER CSS
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-    background-image: url(../img/prev.png);
+  background-image: url("../img/prev.png");
 }
 
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-    background-image: url(../img/next.png);
+  background-image: url("../img/next.png");
 }
-
-
 /* Start writing sass here */
-
 .content {
-    min-height: 450px;
+  min-height: 450px;
 }
 
 .full-img {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
+}
+
+.primary {
+  color: $brand-primary;
+}
+
+.danger {
+  color: $brand-danger;
+}
+
+@font-face {
+  font-family: 'NTR';
+  src: url('../fonts/NTR-Regular.ttf') format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-Regular.ttf') format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-Medium.ttf') format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-Bold.ttf') format("truetype");
+  font-weight: 700;
+}
+.body{
+  font-family: 'Quicksand';
+  font-weight: 400;
+}
+.content {
+  background: url('../img/bg-dotted.jpg');
+  background-size: 100% auto;
 }
 
 @import "fancybox-override";
