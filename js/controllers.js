@@ -41,13 +41,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     five: "views/content/sections/hiring.html",
     six: "views/content/sections/contact.html",
   };
-
-  // $scope.mySlides = [
-  //     'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-  //     'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-  //     'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-  //     'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
-  // ];
+  function AllClient(data, status) {
+    $scope.clients = data;
+    $scope.clients = _.chunk($scope.clients, 9);
+    for (var i = 0; i < $scope.clients.length; i++) {
+      $scope.clients[i] = _.chunk($scope.clients[i], 3);
+    }
+  }
+  $scope.clients = [
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+  ];
 })
 
 .controller('FormCtrl', function($scope, TemplateService, NavigationService, $timeout) {

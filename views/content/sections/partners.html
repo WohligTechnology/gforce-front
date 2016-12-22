@@ -1,0 +1,44 @@
+<div class="home-partners">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="home-about-cont">
+          <h4 class="title-universal uppercase">
+            <span class="danger">OUR</span>
+            <span class="primary">Partners</span>
+          </h4>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries.
+          </p>
+          <div class="button">
+            <button class="btn btn-primary">Know More </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="home-partners-slider">
+          <div class="slider-client">
+            <flex-slider flex-slide="slide in clients track by $index" animation="slide" animation-loop="false" as-nav-for="#sliders" slideshow="false">
+              <li class="" >
+                <div class="logos" >
+                    <div class="row bb" ng-repeat="row in slide">
+                    <div class="col-md-4 col-xs-6" ng-repeat="client in row">
+                      <div class="image-holder text-center">
+                        <img ng-src="{{client}}" style="width:140px;height:140px;" class="doneLoading" alt="">
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </li>
+            </flex-slider>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="landing-bottom">
+      <img src="img/home/partners/partners.png" alt="" class="full-img">
+    </div>
+  </div>
+</div>
